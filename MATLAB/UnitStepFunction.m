@@ -1,0 +1,13 @@
+clc;
+clear all;
+close all;
+n1=input('Enter a range');
+x=-2:n1+1;
+y=[0 0 ones(1,n1+1) 0];
+find(x==0);
+y(find(x>=0))=1;
+stem(x,y);
+axis([-2 n1+1 0 2]);
+title('Unit Step Sequence');
+xlabel('Time->');
+ylabel('Amplitude->');
